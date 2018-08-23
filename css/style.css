@@ -1,0 +1,112 @@
+/********************************/
+/**********  UTILS *************/
+/******************************/
+
+body{
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+}
+
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ver{
+    color: white;
+    position: absolute;
+    top: -15px;
+    right: 15px;
+}
+
+/********************************/
+/**********  CONTENT ***********/
+/******************************/
+
+#content1, #content2, #content3, #content4, #content5, #content6{
+    display: none;
+}
+
+.story2{
+  display: none;
+}
+
+.box-dial{
+    text-align: center;
+    border: 1px solid white;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 30px 30px 60px 30px;
+    width: 400px;
+    margin: auto;
+    margin-top: 30vh;
+    position: relative;
+}
+
+.bleft{
+    position: absolute;
+    left: 50px;
+    background-color: rgba(230,30,15,0.8);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.bright{
+    position: absolute;
+    right: 50px;
+    background-color: rgba(25,100,255,0.8);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.bleft:hover, .bright:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.inventaire{
+    width: 200px;
+    border: 1px solid black;
+    background-color: rgba(255,255,255,0.5);
+    color: black;
+    position: fixed;
+    left: 20px;
+    top: 50px;
+}
+
+/********************************/
+/******  LECTEUR MUSIC *****/
+/******************************/
+
+container-audio {
+    width: 66%;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #eee;
+    color: #444;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+audio {
+  width: 25%;
+  height: 25px;
+}
+
+audio:nth-child(2), audio:nth-child(4), audio:nth-child(6) {
+    margin: 0;
+}
+
+.note{
+    color: white;
+    position: absolute;
+    top: -15px;
+    left: 325px;
+}

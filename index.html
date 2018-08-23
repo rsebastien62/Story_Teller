@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exo02 JS Story Teller</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+
+   <p class="ver">V0.8.5 BETA</p>
+
+  <!--- Lecteur music -------------------->
+
+    <div class="container-audio">
+        <audio controls>
+            <source src="music/main-theme.mp3">
+        </audio>
+    </div>
+    <p class="note no1">&laquo;-- Ambiance sonore : main-theme</p>
+
+  <!--------------------------------------->
+
+    <div id="content1" class="content1 box-dial">
+        <p id="dial1"></p>
+        <button class="bleft" type="button" name="button" onclick="choix1()">La traverser</button>
+        <button class="bright" type="button" name="button" onclick="choix2()">Courir à toute jambe !</button>
+    </div>
+
+    <div id="content2" class="content2 box-dial">
+        <p id="dial2"></p>
+        <!-- Ne pas choisir le meme id que la fonction onclick ! -->
+        <button id="nchoix3" class="bleft" type="button" name="button" onclick="choix3()">Calibre .45</button>
+        <button id="nchoix4" class="bright" type="button" name="button" onclick="choix4()">Gourde d'eau</button>
+        <button id="nchoix5" class="bleft" type="button" name="button" onclick="choix5()">Chewing gum</button>
+        <button id="nchoix6" class="bright" type="button" name="button" onclick="choix6()">Fusée de détresse</button>
+    </div>
+
+    <div id="content3" class="content3 box-dial">
+        <p id="dial3"></p>
+        <p id="dial32"></p>
+        <label for="">Objet découvert : </label>
+        <input type="text" name="objet" value="">
+        <div class="inventaire">Inventaire :
+          <p>Vide</p>
+        </div>
+    </div>
+
+    <div id="content4" class="content4 box-dial">
+        <p id="dial4"></p>
+        <p id="dial42"></p>
+        <div class="inventaire">Inventaire :
+          <p>Vide</p>
+        </div>
+    </div>
+
+
+
+
+
+
+  <!--- JS ----------------------->
+  <script src="js/app.js" charset="utf-8"></script>
+  </body>
+
+</html>
