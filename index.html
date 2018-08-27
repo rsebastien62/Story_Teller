@@ -10,16 +10,17 @@
 
    <p class="ver">V0.8.5 BETA</p>
 
-  <!--- Lecteur music -------------------->
+    <!--- Lecteur music -------------------->
 
     <div class="container-audio">
         <audio controls>
             <source src="music/main-theme.mp3">
         </audio>
+        <p class="note no1">&laquo;-- Ambiance sonore : main-theme</p>
     </div>
-    <p class="note no1">&laquo;-- Ambiance sonore : main-theme</p>
 
-  <!--------------------------------------->
+
+    <!--- ETAPE 1 ---------------------->
 
     <div id="content1" class="content1 box-dial">
         <p id="dial1"></p>
@@ -27,38 +28,132 @@
         <button class="bright" type="button" name="button" onclick="choix2()">Courir à toute jambe !</button>
     </div>
 
+    <!--- ETAPE 2 ---------------------->
+
     <div id="content2" class="content2 box-dial">
         <p id="dial2"></p>
         <!-- Ne pas choisir le meme id que la fonction onclick ! -->
-        <button id="nchoix3" class="bleft" type="button" name="button" onclick="choix3()">Calibre .45</button>
-        <button id="nchoix4" class="bright" type="button" name="button" onclick="choix4()">Gourde d'eau</button>
+        <button id="nchoix3" class="bleft" type="button" name="button" onclick="choix3()" value="Calibre .45">Calibre .45</button>
+        <button id="nchoix4" class="bright" type="button" name="button" onclick="choix4()" value="">Gourde d'eau</button>
         <button id="nchoix5" class="bleft" type="button" name="button" onclick="choix5()">Chewing gum</button>
         <button id="nchoix6" class="bright" type="button" name="button" onclick="choix6()">Fusée de détresse</button>
     </div>
 
+  <!--- ETAPE 3 ---------------------->
+
+  <div id="inventaire" class="inventaire">
+    <img src="img/item.svg" alt="bourse">
+    <p class="inv">Inventaire : </p>
+    <p id="place0"></p>
+    <p id="place1"></p>
+  </div>
+
     <div id="content3" class="content3 box-dial">
         <p id="dial3"></p>
         <p id="dial32"></p>
-        <label for="">Objet découvert : </label>
-        <input type="text" name="objet" value="">
-        <div class="inventaire">Inventaire :
-          <p>Vide</p>
+        <p id="dial33"></p>
+        <div id="bonus">
+          <label for="">Objet découvert : </label>
+          <input id="objet" type="text" name="objet">
+          <button class="prendre" type="button" name="button" onclick="monobjet()">Prendre</button>
         </div>
+        <button class="continu" id="nchoix7" type="button" name="button" onclick="choix7()">Reprendre la route ...</button>
     </div>
 
     <div id="content4" class="content4 box-dial">
         <p id="dial4"></p>
         <p id="dial42"></p>
-        <div class="inventaire">Inventaire :
-          <p>Vide</p>
-        </div>
+    </div>
+
+    <div id="content5" class="content5 box-dial">
+        <p id="dial5"></p>
+        <p id="dial52"></p>
+        <label for="">Objet découvert : </label>
+        <input type="text" name="objet" value="">
+    </div>
+
+    <div id="content6" class="content6 box-dial">
+        <p id="dial6"></p>
+        <p id="dial62"></p>
     </div>
 
 
+  <!--- ETAPE 4 ---------------------->
+
+  <div id="content7" class="content7 box-dial">
+      <p id="dial7"></p>
+      <p id="dial72"></p>
+      <button id="nchoix8" class="bleft" type="button" name="button" onclick="choix8()">La suivre</button>
+      <button id="nchoix9" class="bright" type="button" name="button" onclick="choix9()">Ne pas la suivre</button>
+  </div>
+
+  <img class="licorne" id="licorne1" src="img/licorne1.png"></img>
 
 
+  <!--- ETAPE 5 ---------------------->
+
+  <div id="content8" class="content8 box-dial">
+      <p id="dial8"></p>
+      <p id="dial82"></p>
+      <button class="bleft" id="nchoix10" type="button" name="button" onclick="choix10()">Utiliser le cal. 45</button>
+      <button id="nchoix010" class="bright" type="button" name="button" onclick="choix010()">S'enfuir</button>
+  </div>
+
+  <div class="fight" id="fight1">
+    <button id="mcompteur" type="button" onclick="compteur()">!!! TIRER !!!</button>
+    <p id="gagne">Gagné</p>
+    <p id="dialb1"></p>
+    <p id="dialb2"></p>
+    <button class="continu" id="nchoix11" type="button" name="button" onclick="choix11()">Entrer dans le puit</button>
+  </div>
+
+  <div id="fuite1">
+    <p id="dialf1"></p>
+    <button class="continu" id="nchoix011" type="button" name="button" onclick="choix011()">Combattre le raptor à main nue</button>
+  </div>
+
+  <div class="fight" id="fight2">
+    <button id="res" type="button" onclick="resist()">!!! RESISTER !!!</button>
+    <p id="gagne2">Esquive réussie</p>
+    <p id="dialb12"></p>
+    <p id="dialb21"></p>
+    <button class="continu" id="nchoix12" type="button" name="button" onclick="choix12()">Sauter dans le puit</button>
+  </div>
+
+<img class="licorne" id="licorne2" src="img/licorne2.png"></img>
+<img class="licorne" id="licornedark" src="img/licornedark.png"></img>
+<img class="boss" id="boss1" src="img/boss1.png"></img>
+
+  <!--- GAME OVER ---------------------->
+
+  <div id="gameover1">
+    <p id="mort">GAME OVER</p>
+    <p class="restart">Appuyer sur <b>F5</b> pour recommencer une partie</p>
+  </div>
 
 
+  <!--- FINS ---------------------->
+
+  <div class="fin" id="fin1">
+    <p id="dialfin1"></p>
+    <p id="dialfin11"></p>
+    <button class="continu arbo1" type="button" name="button" onclick="arb1()">Arborescence</button>
+  </div>
+
+  <div class="fin" id="fin2">
+    <p id="dialfin2"></p>
+    <p id="dialfin21"></p>
+    <p id="dialfin31"></p>
+    <button class="continu arbo2" type="button" name="button" onclick="arb2()">Arborescence</button>
+  </div>
+
+  <!--- CREDITS ---------------------->
+    <div class="generique" id="gen">
+      <p id="mescred"></p>
+      <p id="recommencer"></p>
+    </div>
+
+    <button id="credit" class="continu" type="button" name="button" onclick="cred()">Crédits</button>
   <!--- JS ----------------------->
   <script src="js/app.js" charset="utf-8"></script>
   </body>

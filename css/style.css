@@ -3,9 +3,11 @@
 /******************************/
 
 body{
-  margin: 0;
+
   padding: 0;
-  background-size: cover;
+  margin:0 auto;
+  background: fixed no-repeat center;
+  background-size:cover;
 }
 
 .flex-center{
@@ -25,15 +27,114 @@ body{
 /**********  CONTENT ***********/
 /******************************/
 
-#content1, #content2, #content3, #content4, #content5, #content6{
+#content1, #content2, #content3, #content4, #content5, #content6, #content7, #content8, #nchoix7, #inventaire, #gameover1, #gagne, #gagne2, #nchoix11,  #nchoix12, .fin, #credit{
     display: none;
+}
+
+.prendre{
+  background-color: rgba(95,219,13,0.8);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.licorne{
+  display: none;
+  width: 335px;
+  position: absolute;
+  right: 10px;
+  top: 30vh;
+  z-index: 1;
+}
+
+#licornedark{
+  width: 400px;
+  top: 15vh;
+}
+
+.boss{
+  display: none;
+  width: 335px;
+  position: absolute;
+  right: 10px;
+  top: 30vh;
+  z-index: 1;
+}
+
+.fight{
+  display: none;
+  text-align: center;
+  color: white;
+  padding: 30px;
+  width: 400px;
+  margin: auto;
+  margin-top: 30vh;
+  position: relative;
+  padding-bottom: 50px;
+  z-index: 2;
+}
+
+#fuite1{
+  display: none;
+  text-align: center;
+  border: 1px solid white;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding: 30px 30px 60px 30px;
+  width: 400px;
+  margin: auto;
+  margin-top: 30vh;
+  position: relative;
+  z-index: 2;
+}
+
+#gameover1{
+  text-align: center;
+  color: white;
+  padding: 30px;
+  width: 400px;
+  margin: auto;
+  margin-top: 15vh;
+  position: relative;
+  z-index: 2;
+}
+
+#mcompteur, #res{
+  width: 300px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: #db0d20;
+}
+
+#mcompteur:hover, #res:hover, .prendre:hover{
+  cursor: pointer;
+}
+
+#gagne, #gagne2{
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 0;
+  text-transform: capitalize;
+}
+
+@font-face {
+	font-family: "dead";
+	src: url('../typo/Something-Strange.ttf');
+}
+
+#mort{
+  font-family: 'dead', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 90px;
+  color: #ab2424;
 }
 
 .story2{
   display: none;
 }
 
-.box-dial{
+.box-dial, .fin{
     text-align: center;
     border: 1px solid white;
     background-color: rgba(0,0,0,0.5);
@@ -43,6 +144,7 @@ body{
     margin: auto;
     margin-top: 30vh;
     position: relative;
+    z-index: 2;
 }
 
 .bleft{
@@ -65,10 +167,14 @@ body{
     color: white;
 }
 
-.bleft:hover, .bright:hover{
+.bleft:hover, .bright:hover, .continu:hover{
     cursor: pointer;
     color: black;
 }
+
+/* .bleft:hover{
+  background-color: rgba(150,30,15,1);
+} */
 
 .inventaire{
     width: 200px;
@@ -78,7 +184,70 @@ body{
     position: fixed;
     left: 20px;
     top: 50px;
+    text-align: center;
 }
+
+.inventaire img{
+  height:40px;
+  position: absolute;
+  left: 10px;
+  top: 25px;
+}
+
+.inv{
+  font-weight: bold;
+}
+
+.continu{
+  background-color: rgba(95,219,13,0.8);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  bottom: 20px;
+}
+
+.arbo1, .arbo2{
+  margin-left: -50px;
+}
+
+#nchoix011{
+  margin-left: -100px;
+  background-color: rgba(230,30,15,0.8);
+}
+
+#nchoix12{
+  background-color: rgba(25,100,255,0.8);
+}
+
+#fin2{
+  margin-top: 5vh;
+}
+
+
+
+
+
+.generique{
+  display: none;
+  width: 80%;
+  text-align: center;
+  border: 1px solid white;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding: 30px;
+  height: 80vh;
+  margin: auto;
+  margin-top: 10vh;
+  position: relative;
+  z-index: 2;
+}
+
+
+
 
 /********************************/
 /******  LECTEUR MUSIC *****/
@@ -108,5 +277,5 @@ audio:nth-child(2), audio:nth-child(4), audio:nth-child(6) {
     color: white;
     position: absolute;
     top: -15px;
-    left: 325px;
+    left: 26%;
 }
